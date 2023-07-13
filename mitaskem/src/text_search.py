@@ -1,10 +1,13 @@
-from gpt_interaction import *
 from openai import OpenAIError
-from connect import *
 import re
 import argparse
 from gpt_key import *
-from mira_dkg_interface import *
+
+
+from mitaskem.src.gpt_interaction import *
+from mitaskem.src.connect import *
+from mitaskem.src.mira_dkg_interface import *
+
 
 MAX_TEXT_MATCHES = 2
 MAX_DKG_MATCHES = 2

@@ -7,7 +7,7 @@ from fastapi.responses import JSONResponse
 sys.path.append(
     os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 )
-from src.connect import code_text_connection
+from mitaskem.src.connect import code_text_connection
 
 router = APIRouter()
 

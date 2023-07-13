@@ -1,4 +1,4 @@
-from gpt_interaction import *
+from mitaskem.src.gpt_interaction import *
 from openai import OpenAIError
 import re
 

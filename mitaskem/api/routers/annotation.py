@@ -3,15 +3,15 @@ import ast, io, random, sys, os
 from fastapi import APIRouter, status, UploadFile, File, HTTPException
 from fastapi.responses import JSONResponse
 
-from file_cache import save_file_to_cache
-from mit_extraction import async_mit_extraction_restAPI
+from mitaskem.src.file_cache import save_file_to_cache
+from mitaskem.src.mit_extraction import async_mit_extraction_restAPI
 
 sys.path.append(
     os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 )
-from src.text_search import text_var_search, vars_to_json, vars_dedup
-from src.connect import vars_formula_connection, dataset_header_document_dkg, vars_dataset_connection_simplified
-from src.link_annos_to_pyacset import link_annos_to_pyacset
+from mitaskem.src.text_search import text_var_search, vars_to_json, vars_dedup
+from mitaskem.src.connect import vars_formula_connection, dataset_header_document_dkg, vars_dataset_connection_simplified
+from mitaskem.src.link_annos_to_pyacset import link_annos_to_pyacset
 
 router = APIRouter()
 

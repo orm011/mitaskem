@@ -6,11 +6,12 @@
 
 import os
 import openai
-from mit_extraction import async_mit_extraction_restAPI
+from mitaskem.src.mit_extraction import async_mit_extraction_restAPI
 import asyncio
+import gpt_key
 
-bucky_path = os.path.abspath('../resources/models/Bucky/bucky.txt')
-res = asyncio.run(async_mit_extraction_restAPI('/tmp/askemcache/bucky.txt', gpt_key=openai.api_key, cache_dir='/tmp/askemcache/'))
+bucky_path = os.path.abspath('../../mitaskem/resources/models/Bucky/bucky.txt')
+res = asyncio.run(async_mit_extraction_restAPI('/tmp/askemcache/bucky.txt', gpt_key=gpt_key.GPT_KEY , cache_dir='/tmp/askemcache/'))
 
 print('result:', res)
 

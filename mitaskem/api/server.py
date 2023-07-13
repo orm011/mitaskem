@@ -1,9 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-
-
-from file_cache import init_cache_directory
-from routers import code_dataset, code_formula, code_text, avail_check, petri, annotation, integration, cards
+from mitaskem.src.file_cache import init_cache_directory
+from mitaskem.api.routers import code_dataset, code_formula, code_text, avail_check, petri, annotation, integration, cards
 
 tags_metadata = [
     # {

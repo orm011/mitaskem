@@ -10,8 +10,8 @@ from askem_extractions.importers import import_arizona, import_mit
 from askem_extractions.importers.mit import merge_collections
 
 import gpt_key
-from file_cache import save_file_to_cache
-from mit_extraction import mit_extraction_restAPI, load_concise_vars, load_arizona_concise_vars, \
+from src.file_cache import save_file_to_cache
+from src.mit_extraction import mit_extraction_restAPI, load_concise_vars, load_arizona_concise_vars, \
     build_map_from_concise_vars
 
 sys.path.append(

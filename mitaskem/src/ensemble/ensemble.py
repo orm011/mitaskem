@@ -3,7 +3,7 @@ import json
 from langchain.document_loaders import PyPDFLoader
 
 from gpt_key import GPT_KEY
-from text_search import text_param_search, text_var_search
+from mitaskem.src.text_search import text_param_search, text_var_search
 
 
 def extract_paper_info(input_json_file, output_json_file):
@@ -40,7 +40,7 @@ def load_pdf(pdf_file, output_file):
     with open(output_file, 'w', encoding='utf-8') as outfile:
         outfile.write(content_str)
 
-from methods import split_latex_into_chunks
+from mitaskem.src.methods import split_latex_into_chunks
 
 # def async_extract_vars(in_path, out_dir):
 #     out_filename_params = out_dir + "/" + in_path.split("/")[-1].split(".txt")[0] + "_params.txt"

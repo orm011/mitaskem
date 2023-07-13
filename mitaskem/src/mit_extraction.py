@@ -4,12 +4,10 @@ from pathlib import Path
 
 from askem_extractions.importers import import_mit
 
-import gpt_key
-from connect import get_mit_arizona_var_prompt, get_gpt4_match, vars_dataset_connection_simplified
-from dataset_id import modify_dataset
-from ensemble.ensemble import load_paper_info, extract_variables, extract_vars
-from gpt_key import *
-from text_search import text_var_search, vars_dedup, vars_to_json, avars_to_json
+from mitaskem.src.connect import get_mit_arizona_var_prompt, get_gpt4_match, vars_dataset_connection_simplified
+from mitaskem.src.dataset_id import modify_dataset
+from mitaskem.src.ensemble.ensemble import load_paper_info, extract_variables, extract_vars
+from mitaskem.src.text_search import text_var_search, vars_dedup, vars_to_json, avars_to_json
 
 PARAM = "/Users/chunwei/research/mitaskem/resources/xDD/params/"
 API_ROOT = "http://0.0.0.0:8000/"
@@ -129,7 +127,7 @@ def find_vars_from_text(text: str, gpt_key: str):
 
     return ast.literal_eval(vars_to_json(vars_dedup(outputs)))
 
-from methods import create_prompt_tasks, fork_join_requests, split_latex_into_chunks
+from mitaskem.src.methods import create_prompt_tasks, fork_join_requests, split_latex_into_chunks
 
 async def _extract_text_vars(text, var_prompt, api_key=None):
     model_name = 'text-davinci-003'

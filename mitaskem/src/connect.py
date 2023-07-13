@@ -11,14 +11,14 @@ from cryptography.fernet import Fernet
 import openai
 from openai import OpenAIError
 from PIL import Image
-import gpt_interaction
+import mitaskem.src.gpt_interaction
 from tqdm import tqdm
 import ast
 import sys
 
-from util import *
-from gpt_interaction import *
-from mira_dkg_interface import *
+from mitaskem.src.util import *
+from mitaskem.src.gpt_interaction import *
+from mitaskem.src.mira_dkg_interface import *
 from gpt_key import *
 # from automates.program_analysis.JSON2GroMEt.json2gromet import json_to_gromet
 # from automates.gromet.query import query

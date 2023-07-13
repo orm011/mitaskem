@@ -1,4 +1,4 @@
-from connect import dataset_header_dkg
+from mitaskem.src.connect import dataset_header_dkg
 from gpt_key import GPT_KEY
 import os
 import csv
